@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   resources :posts
   resources :categories
+  resources :users
 
   # Example resource route with options:
   #   resources :products do

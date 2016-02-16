@@ -8,9 +8,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-ember_cat = Category.create(title: 'ember')
+Category.create(title: 'ember')
 Category.create(title: 'rails')
+
+User.create(first_name: 'Thomas', last_name: 'Nielsen')
+User.create(first_name: 'Kim', last_name: 'Røen')
 
 Post.create(title: 'First post',
             content: 'This is the first blog post ever created.',
-            category: ember_cat)
+            category: Category.first,
+            author: User.first)
