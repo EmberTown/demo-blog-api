@@ -8,5 +8,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+ember_cat = Category.create(title: 'ember')
+Category.create(title: 'rails')
+
 Post.create(title: 'First post',
-            content: 'This is the first blog post ever created.')
+            content: 'This is the first blog post ever created.',
+            category: ember_cat)
