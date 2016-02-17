@@ -57,6 +57,8 @@ GEM
     mustache (0.99.8)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    pg (0.18.4)
+    puma (2.16.0)
     rack (1.6.4)
     rack-cors (0.4.0)
     rack-test (0.6.3)
@@ -126,6 +128,8 @@ PLATFORMS
 
 DEPENDENCIES
   jsonapi-resources
+  pg
+  puma
   rack-cors
   rails (= 4.2.5.1)
   rails-api

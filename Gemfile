@@ -6,7 +6,15 @@ gem 'rails-api'
 
 gem 'spring', group: :development
 
-gem 'sqlite3'
+# Never do this - use the same db in dev and prod.
+group :development do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+  gem 'puma'
+end
 
 gem 'jsonapi-resources'
 gem 'rspec_api_documentation'
