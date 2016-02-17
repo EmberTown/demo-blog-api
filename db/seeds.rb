@@ -14,7 +14,11 @@ Category.create(title: 'rails')
 User.create(first_name: 'Thomas', last_name: 'Nielsen')
 User.create(first_name: 'Kim', last_name: 'Røen')
 
-Post.create(title: 'First post',
-            content: 'This is the first blog post ever created.',
-            category: Category.first,
-            author: User.first)
+5.times do
+  Post.create!(
+    title: Faker::Book.title,
+    content: Faker::Hipster.paragraphs(3).join("\n\n"),
+    category: Category.first,
+    author: User.first
+  )
+end
