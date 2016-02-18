@@ -17,7 +17,7 @@ User.create(first_name: 'Kim', last_name: 'Røen')
 5.times do
   Post.create!(
     title: Faker::Book.title,
-    content: Faker::Hipster.paragraphs(3).join("\n\n"),
+    body: Faker::Hipster.paragraphs(3).join("\n\n"),
     category: Category.first,
     author: User.first
   )
